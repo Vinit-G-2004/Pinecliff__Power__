@@ -8,21 +8,25 @@ const services = [
     icon: Zap,
     title: 'Quick Power',
     description: 'On-demand diesel generators delivered within 30 minutes',
+    image: '/services/quick-power.jpeg',
   },
   {
     icon: CheckCircle,
     title: 'Load Testing',
     description: 'Comprehensive load testing to verify reliability and capacity',
+    image: '/services/load-testing.png',
   },
   {
     icon: Settings,
     title: 'DG Set on Hire / Rental',
     description: 'Flexible rental options from 62 KVA to 2000 KVA',
+    image: '/services/dg-rental.jpeg',
   },
   {
     icon: Wrench,
     title: 'Installation',
     description: 'Professional setup ensuring optimal performance and compliance',
+    image: '/services/installation.png',
   },
 ];
 
@@ -68,6 +72,16 @@ export default function Services() {
                   className="bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-2xl p-8 h-full hover:shadow-2xl transition-all duration-300 group cursor-pointer"
                   whileHover={{ y: -10, scale: 1.02 }}
                 >
+                  {/* IMAGE (ADDED ONLY) */}
+                  <div className="mb-6 overflow-hidden rounded-xl">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="w-full h-40 object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                  </div>
+
+                  {/* ICON (UNCHANGED) */}
                   <motion.div
                     className="w-16 h-16 bg-gradient-to-br from-[#7CB342] to-[#9CCC65] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300"
                     whileHover={{ rotate: 5 }}
@@ -75,6 +89,7 @@ export default function Services() {
                     <service.icon className="w-8 h-8 text-white" strokeWidth={2} />
                   </motion.div>
 
+                  {/* TEXT (UNCHANGED) */}
                   <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-[#7CB342] transition-colors">
                     {service.title}
                   </h3>
