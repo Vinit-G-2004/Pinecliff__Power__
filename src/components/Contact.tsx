@@ -6,7 +6,12 @@ import { MapPin, Phone, Mail } from 'lucide-react';
 const contactInfo = [
   {
     icon: MapPin,
-    title: 'Address',
+    title: 'Main Office',
+    details: ['NMS Titanium, Plot No. 74, Sector 15, CBD Belapur, Navi Mumbai, Maharashtra 400614, India'],
+  },
+    {
+    icon: MapPin,
+    title: 'Workshop',
     details: ['Pinecliff Power Pvt Ltd', 'Ambethan, Tal-Khed, Pune', 'Maharashtra – 410501, India'],
   },
   {
