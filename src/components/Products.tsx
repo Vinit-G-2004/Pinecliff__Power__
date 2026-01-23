@@ -3,23 +3,23 @@ import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 
 const products = [
-   {
+  {
     name: 'Cummins 1500 kVA Diesel Generator (CPCB II & CPCB IV)',
     image: '/products/4.jpeg',
   },
   {
     name: '1500 kVA Cummins Diesel Generator – K50 Series',
-    image: 'products/1.jpeg',
+    image: '/products/1.jpeg',
   },
   {
     name: 'Cummins 1010 kVA Diesel Generator (CPCB II & CPCB IV)',
     image: '/products/2.jpeg',
   },
-   {
+  {
     name: 'Cummins 900 kVA Diesel Generator (CPCB II & CPCB IV)',
     image: '/products/10.jpeg',
   },
-    {
+  {
     name: 'Cummins 750 kVA Diesel Generator (CPCB II & CPCB IV)',
     image: '/products/9.jpeg',
   },
@@ -27,15 +27,15 @@ const products = [
     name: 'Cummins 500 kVA Diesel Generator (CPCB II & CPCB IV)',
     image: '/products/8.jpeg',
   },
-   {
+  {
     name: 'Cummins 320 kVA Diesel Generator (CPCB II & CPCB IV)',
     image: '/products/7.jpeg',
   },
-   {
+  {
     name: 'Cummins 250 kVA Diesel Generator (CPCB II & CPCB IV)',
     image: '/products/6.jpeg',
   },
-   {
+  {
     name: 'Cummins 225 kVA Diesel Generator (CPCB II & CPCB IV)',
     image: '/products/5.jpeg',
   },
@@ -43,14 +43,6 @@ const products = [
     name: 'Cummins 125 kVA Diesel Generator (CPCB II & CPCB IV)',
     image: '/products/3.jpeg',
   },
-  
-  
-  
-  
-   
- 
-  
-  // add remaining products (up to 10) same format
 ];
 
 export default function Products() {
@@ -78,11 +70,11 @@ export default function Products() {
         </motion.div>
 
         <div className="relative">
-          <div className="flex overflow-x-auto gap-8 pb-8 snap-x snap-mandatory scrollbar-hide">
+          <div className="flex overflow-x-auto gap-6 sm:gap-8 pb-8 snap-x snap-mandatory scrollbar-hide">
             {products.map((product, index) => (
               <motion.div
                 key={index}
-                className="flex-shrink-0 w-96 snap-center"
+                className="flex-shrink-0 w-72 sm:w-80 md:w-96 snap-center"
                 initial={{ opacity: 0, x: 100 }}
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.15 }}
@@ -91,8 +83,8 @@ export default function Products() {
                   className="bg-white border-2 border-gray-200 rounded-3xl overflow-hidden hover:border-[#7CB342] transition-all duration-300 group"
                   whileHover={{ y: -10 }}
                 >
-                  {/* PRODUCT IMAGE (ADDED) */}
-                  <div className="h-56 w-45 overflow-hidden">
+                  {/* PRODUCT IMAGE (SLIGHTLY SMALLER) */}
+                  <div className="h-40 sm:h-44 md:h-52 overflow-hidden">
                     <img
                       src={product.image}
                       alt={product.name}
@@ -101,8 +93,8 @@ export default function Products() {
                   </div>
 
                   {/* PRODUCT NAME */}
-                  <div className="p-6 text-center">
-                    <h3 className="text-2xl font-bold text-gray-900 group-hover:text-[#7CB342] transition-colors">
+                  <div className="p-4 sm:p-5 md:p-6 text-center">
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 group-hover:text-[#7CB342] transition-colors">
                       {product.name}
                     </h3>
                   </div>
