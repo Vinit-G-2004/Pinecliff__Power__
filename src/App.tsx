@@ -16,7 +16,7 @@ function App() {
       <Services />
       <Compliance />
       <Products />
-      <Contact />
+     
       <Footer />
     </div>
   );
