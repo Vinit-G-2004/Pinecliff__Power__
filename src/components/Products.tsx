@@ -3,6 +3,10 @@ import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 
 const products = [
+   {
+    name: 'Cummins 1500 kVA Diesel Generator (CPCB II & CPCB IV)',
+    image: '/products/4.jpeg',
+  },
   {
     name: '1500 kVA Cummins Diesel Generator – K50 Series',
     image: 'products/1.jpeg',
@@ -11,38 +15,41 @@ const products = [
     name: 'Cummins 1010 kVA Diesel Generator (CPCB II & CPCB IV)',
     image: '/products/2.jpeg',
   },
+   {
+    name: 'Cummins 900 kVA Diesel Generator (CPCB II & CPCB IV)',
+    image: '/products/10.jpeg',
+  },
+    {
+    name: 'Cummins 750 kVA Diesel Generator (CPCB II & CPCB IV)',
+    image: '/products/9.jpeg',
+  },
   {
-    name: 'Cummins 125 kVA Diesel Generator (CPCB II & CPCB IV)',
-    image: '/products/3.jpeg',
-  },
-   {
-    name: 'Cummins 1500 kVA Diesel Generator (CPCB II & CPCB IV)',
-    image: '/products/4.jpeg',
-  },
-   {
-    name: 'Cummins 225 kVA Diesel Generator (CPCB II & CPCB IV)',
-    image: '/products/5.jpeg',
-  },
-   {
-    name: 'Cummins 250 kVA Diesel Generator (CPCB II & CPCB IV)',
-    image: '/products/6.jpeg',
+    name: 'Cummins 500 kVA Diesel Generator (CPCB II & CPCB IV)',
+    image: '/products/8.jpeg',
   },
    {
     name: 'Cummins 320 kVA Diesel Generator (CPCB II & CPCB IV)',
     image: '/products/7.jpeg',
   },
    {
-    name: 'Cummins 500 kVA Diesel Generator (CPCB II & CPCB IV)',
-    image: '/products/8.jpeg',
+    name: 'Cummins 250 kVA Diesel Generator (CPCB II & CPCB IV)',
+    image: '/products/6.jpeg',
   },
    {
-    name: 'Cummins 750 kVA Diesel Generator (CPCB II & CPCB IV)',
-    image: '/products/9.jpeg',
+    name: 'Cummins 225 kVA Diesel Generator (CPCB II & CPCB IV)',
+    image: '/products/5.jpeg',
   },
-   {
-    name: 'Cummins 900 kVA Diesel Generator (CPCB II & CPCB IV)',
-    image: '/products/10.jpeg',
+  {
+    name: 'Cummins 125 kVA Diesel Generator (CPCB II & CPCB IV)',
+    image: '/products/3.jpeg',
   },
+  
+  
+  
+  
+   
+ 
+  
   // add remaining products (up to 10) same format
 ];
 
@@ -85,7 +92,7 @@ export default function Products() {
                   whileHover={{ y: -10 }}
                 >
                   {/* PRODUCT IMAGE (ADDED) */}
-                  <div className="h-56 overflow-hidden">
+                  <div className="h-56 w-45 overflow-hidden">
                     <img
                       src={product.image}
                       alt={product.name}
